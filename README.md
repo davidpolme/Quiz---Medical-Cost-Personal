@@ -26,23 +26,25 @@ Se obtuvo un valor MSE = 0.008560069824175879. Lo cual simboliza un buen rendimi
 
 ## Modelo Lasso
 
-Se realizaron dos reducciones de dimensionalidad polinomial una con grado 2 y otra con grado 3. Además se realizaron 2 modelos Lasso en donde se ajustó sus hiperparámetro alpha en 1 y 2, obteniendo los sigientes valores de MSE:
+Se realizaron dos reducciones de dimensionalidad polinomial una con grado 2 y otra con grado 3. Además se realizaron 3 modelos Lasso en donde se ajustó sus hiperparámetro alpha en 0.1, 0.2 y 0.9, obteniendo los sigientes valores de MSE:
 
 | Lasso     | Polynomial grado 2   | Polynomial grado 3         |
 | --------- | -------------------- | --------------------       |
 | **Alpha 0.1** | 0.03959177723052453 |   0.03959177723052453  |
-| **Alpha 0.2** | 0.03959177723052453 | 0.03959177723052453   |
+| **Alpha 0.2** | 0.03959177723052453 | 0.03959177723052453   | 
+| **Alpha 0.9** | 0.03959177723052453 | 0.03959177723052453   | 
 
 El modelo lasso demuestra una mejora frente a la regresión lineal, sin embargo, se procede a verificar si es posible optimizar el desempeño. 
-
+Vale la pena notar que de los hiperparámetros alpha que se usaron, estos no afectaron en la mejora del rendimiento del modelo.
 ## Modelo Ridge
 
-Similar al modelo lasso, se realizó reducción de dimensionalidad polinomial, y se asignaron 2 valores de alpha a los modelos Ridge, 0.1 y 0.2. Sus MSE son los siguientes:
+Similar al modelo lasso, se realizó reducción de dimensionalidad polinomial, y se asignaron 3 valores de alpha a los modelos Ridge, 0.1, 0.2 y 0.9. Sus MSE son los siguientes:
 
 | Ridge     | Polynomial grado 2   | Polynomial grado 3         |
 | --------- | -------------------- | --------------------       |
 | **Alpha 0.1** | 0.005275733981348491 |  0.005275733981348491  |
 | **Alpha 0.2** | 0.005278511098625507 | 0.005278511098625507   | 
+| **Alpha 0.9** | 0.0053639436121030405| 0.0053639436121030405   | 
 
 Como se puede observar en la tabla, cambiar el hiperparámetro del modelo ridge, con los valores seleccionados, no afecta al desempeño. Sin embargo, el grado de la reducción polinomial si puede afectar el rendimiento del polinomio, al menos con los valores usados.
 
